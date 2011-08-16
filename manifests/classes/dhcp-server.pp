@@ -33,5 +33,6 @@ node "dhcp.toto.ltd" {
 class dhcp::server {
   case $operatingsystem {
     Debian: { include dhcp::server::debian }
+    CentOS: { include dhcp::server::centos }
   }
 }

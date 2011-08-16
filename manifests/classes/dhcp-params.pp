@@ -20,7 +20,7 @@ class dhcp::params {
     }
     CentOS: {
       $config_dir = "/etc/dhcpd",
-      $srv_dhcpd = "dhcpd";
+      $srv_dhcpd = "dhcp";
     }
   }
 }
