@@ -18,5 +18,9 @@ class dhcp::params {
         squeeze => "isc-dhcp-server",
       }
     }
+    CentOS: {
+      $config_dir = "/etc/dhcpd",
+      $srv_dhcpd = "dhcpd";
+    }
   }
 }
