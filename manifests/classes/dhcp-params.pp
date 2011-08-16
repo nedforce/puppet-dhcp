@@ -19,8 +19,8 @@ class dhcp::params {
       }
     }
     CentOS: {
-      $config_dir = "/etc/dhcpd",
-      $srv_dhcpd = "dhcp";
+      $config_dir = "/etc/dhcpd"
+      $srv_dhcpd = "dhcp"
     }
   }
 }

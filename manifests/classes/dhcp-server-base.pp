@@ -19,6 +19,11 @@ class dhcp::server::base {
     enable  => true,
     require => Package["dhcp-server"],
   }
+  
+  file {"${dhcp::params::config_dir}":
+    ensure => directory,
+    require => Package["dhcp-server"],
+  }
 
   common::concatfilepart {"00.dhcp.server.base":
     file    => "${dhcp::params::config_dir}/dhcpd.conf",
@@ -26,7 +31,7 @@ class dhcp::server::base {
     require => Package["dhcp-server"],
     notify  => Service["dhcpd"],
   }
-
+  
   file {"${dhcp::params::config_dir}/dhcpd.conf.d":
     ensure => directory,
     mode   => 0700,

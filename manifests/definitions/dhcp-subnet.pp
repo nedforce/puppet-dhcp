@@ -22,7 +22,7 @@ node "dhcp.domain.ltd" {
   dhcp::subnet {"10.27.20.0":
     ensure     => present,
     broadcast  => "10.27.20.255",
-    other_opts => ['filename "pxelinux.0";', 'next-server 10.27.10.1;'],
+    other_opts => ['filename "pxelinux.0"', 'next-server 10.27.10.1'],
   }
 }
 */
