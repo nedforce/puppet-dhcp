@@ -15,8 +15,6 @@ class dhcp::server::base {
 
   service {"dhcpd":
     name    => $dhcp::params::srv_dhcpd,
-    ensure  => present,
-    enable  => true,
     require => Package["dhcp-server"],
   }
   
